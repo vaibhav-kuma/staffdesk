@@ -18,7 +18,7 @@
   </modules>
   <properties>
     <java.version>21</java.version>
-    <javafx.version>21.0.13</javafx.version>
+    <javafx.version>27.0.1</javafx.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <build>
