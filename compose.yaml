@@ -1,0 +1,56 @@
+name: staffdesk
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: staffdesk
+      POSTGRES_USER: ${DB_USER:?Set DB_USER in .env}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in .env}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    # No host port: database is accessible only on the private Compose network.
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U "$$POSTGRES_USER" -d "$$POSTGRES_DB"']
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+    security_opt: [no-new-privileges:true]
+    shm_size: 128mb
+    mem_limit: 768m
+    logging:
+      driver: json-file
+      options: {max-size: 10m, max-file: '3'}
+  api:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile
+    image: staffdesk-api:local
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/staffdesk
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET:?Set a Base64 JWT_SECRET in .env}
+      BOOTSTRAP_ADMIN_EMAIL: ${BOOTSTRAP_ADMIN_EMAIL:-}
+      BOOTSTRAP_ADMIN_PASSWORD: ${BOOTSTRAP_ADMIN_PASSWORD:-}
+      API_DOCS_ENABLED: ${API_DOCS_ENABLED:-false}
+      SPRING_PROFILES_ACTIVE: prod
+      # This local HTTP listener is NOT a trusted reverse-proxy deployment.
+      FORWARD_HEADERS_STRATEGY: none
+    ports: ['127.0.0.1:8080:8080']
+    depends_on:
+      db: {condition: service_healthy}
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - "/tmp:rw,noexec,nosuid,size=128m"
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 768m
+    cpus: 2
+    stop_grace_period: 30s
+    logging:
+      driver: json-file
+      options: {max-size: 10m, max-file: '3'}
+volumes:
+  postgres-data:

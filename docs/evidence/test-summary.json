@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-19",
+  "database": "Real PostgreSQL 17.12 (explicit disposable DB, not H2)",
+  "notes": "Desktop XML summary is from the additional live UI e2e rerun; same 4 desktop tests also passed in the full 30-test reactor run.",
+  "suites": [
+    {
+      "name": "com.staffdesk.EmployeeServiceTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "1.227"
+    },
+    {
+      "name": "com.staffdesk.config.SecurityConfigTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.019"
+    },
+    {
+      "name": "com.staffdesk.ApplicationIT",
+      "tests": "23",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "23.398"
+    },
+    {
+      "name": "com.staffdesk.desktop.ApiClientTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.651"
+    },
+    {
+      "name": "com.staffdesk.desktop.FxSmokeTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.201"
+    }
+  ],
+  "uniqueTests": 30,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0
+}

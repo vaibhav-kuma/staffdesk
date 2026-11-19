@@ -1,0 +1,47 @@
+.root { -fx-font-family: "Inter", "Segoe UI", "Helvetica Neue", sans-serif; -fx-font-size: 13px; -fx-background-color: #f4f6f9; -fx-text-fill: #14283e; -fx-accent: #0d806d; -fx-focus-color: #0d806d; -fx-faint-focus-color: #0d806d18; }
+.label { -fx-text-fill: #20344c; }
+.sidebar, .login-story { -fx-background-color: #102b3c; -fx-padding: 32 22 24 22; }
+.login-story { -fx-padding: 46; }
+.brand { -fx-text-fill: #f7fcff; -fx-font-size: 19px; -fx-font-weight: bold; -fx-padding: 0 0 30 0; }
+.eyebrow { -fx-text-fill: #82b9ba; -fx-font-size: 10px; -fx-font-weight: bold; }
+.hero { -fx-text-fill: #ffffff; -fx-font-size: 42px; -fx-font-weight: bold; }
+.hero-copy { -fx-text-fill: #b5cbd3; -fx-font-size: 15px; -fx-line-spacing: 6; }
+.sidebar-copy { -fx-text-fill: #c0d0dc; -fx-font-size: 12px; }
+.content { -fx-padding: 36 32 22 32; }
+.overline { -fx-text-fill: #728296; -fx-font-size: 10px; -fx-font-weight: bold; }
+.page-title { -fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #142a40; }
+.muted { -fx-text-fill: #718095; -fx-font-size: 12px; }
+.field-label { -fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #405269; }
+.card { -fx-background-color: white; -fx-background-radius: 12; -fx-border-color: #e5eaf0; -fx-border-radius: 12; -fx-padding: 22; }
+.button { -fx-background-color: #edf1f5; -fx-background-radius: 7; -fx-padding: 10 14; -fx-text-fill: #354960; -fx-cursor: hand; -fx-font-weight: bold; }
+.button:hover { -fx-background-color: #e0e9ed; }
+.button:disabled { -fx-opacity: 0.45; }
+.primary { -fx-background-color: #0c806e; -fx-text-fill: white; -fx-padding: 12 18; }
+.primary:hover { -fx-background-color: #086757; }
+.nav { -fx-background-color: transparent; -fx-text-fill: #d4e2e9; -fx-alignment: center-left; -fx-padding: 13 10; }
+.nav:hover { -fx-background-color: #214255; }
+.text-button, .danger-text { -fx-background-color: transparent; -fx-text-fill: #0c806e; -fx-padding: 8; -fx-font-size: 12px; }
+.danger-text { -fx-text-fill: #b84a53; }
+.text-field, .password-field, .combo-box, .date-picker { -fx-background-color: #f9fbfd; -fx-border-color: #dae2ea; -fx-border-radius: 7; -fx-background-radius: 7; -fx-padding: 7 9; }
+.text-field:focused, .password-field:focused { -fx-border-color: #0d806d; }
+.combo-box .list-cell { -fx-padding: 2 3; }
+.table-view { -fx-background-color: transparent; -fx-border-width: 0; -fx-selection-bar: #e5f3ef; -fx-selection-bar-non-focused: #eff6f5; }
+.table-view .column-header-background { -fx-background-color: #f5f7fa; -fx-background-radius: 5; }
+.table-view .column-header, .table-view .filler { -fx-background-color: transparent; -fx-border-width: 0; -fx-size: 40; }
+.table-view .column-header .label { -fx-text-fill: #7a879a; -fx-font-size: 10px; -fx-alignment: center-left; -fx-padding: 0 10; }
+.table-row-cell { -fx-background-color: white; -fx-border-color: transparent transparent #edf1f5 transparent; -fx-cell-size: 72; }
+.table-row-cell:empty { -fx-background-color: white; -fx-border-width: 0; }
+.table-row-cell:selected { -fx-background-color: #eaf5f1; }
+.table-cell { -fx-border-width: 0; -fx-alignment: center-left; -fx-padding: 10; -fx-text-fill: #354960; }
+.table-row-cell:selected .text { -fx-fill: #20344c; }
+.person-name { -fx-font-size: 13px; -fx-font-weight: bold; }
+.avatar { -fx-background-color: #e6f2ef; -fx-text-fill: #0d806d; -fx-background-radius: 22; -fx-min-width: 36; -fx-min-height: 36; -fx-alignment: center; -fx-font-weight: bold; }
+.badge { -fx-font-size: 9px; -fx-font-weight: bold; -fx-padding: 6 9; -fx-background-radius: 5; }
+.badge-active { -fx-background-color: #e4f5eb; -fx-text-fill: #217549; }
+.badge-on_leave { -fx-background-color: #fff2da; -fx-text-fill: #916218; }
+.badge-inactive { -fx-background-color: #eef0f4; -fx-text-fill: #758294; }
+.footer { -fx-padding: 10 32; -fx-background-color: #edf1f5; -fx-alignment: center-left; }
+.notice { -fx-text-fill: #697c8e; -fx-font-size: 11px; }
+.error { -fx-text-fill: #b13946; -fx-font-size: 12px; }
+.dialog-pane { -fx-background-color: #ffffff; -fx-padding: 22; }
+.separator .line { -fx-border-color: #e5eaf0; -fx-border-width: 1 0 0 0; }

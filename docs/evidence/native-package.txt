@@ -1,0 +1,5 @@
+Linux x86_64 app-image built with JDK 21.0.13 jpackage.
+Bundled runtime launcher executed under Xvfb.
+Process remained running until expected 7-second timeout (exit 124), with no launch exception.
+Expected warning: JavaFX classes loaded from unnamed module (classpath packaging).
+Windows/macOS packages configured but not executed in this sandbox.

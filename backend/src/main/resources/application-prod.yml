@@ -1,0 +1,6 @@
+logging:
+  structured:
+    format:
+      console: logstash
+server:
+  forward-headers-strategy: ${FORWARD_HEADERS_STRATEGY:framework}

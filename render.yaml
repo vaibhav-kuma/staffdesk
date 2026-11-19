@@ -1,0 +1,49 @@
+# Build-first template. Review account-specific plan names/costs before provisioning.
+services:
+  - type: web
+    name: staffdesk-api
+    runtime: docker
+    region: singapore
+    plan: 0.5c-512mb
+    dockerfilePath: ./deploy/Dockerfile
+    dockerContext: .
+    numInstances: 1
+    autoDeployTrigger: 'off'
+    healthCheckPath: /actuator/health/readiness
+    maxShutdownDelaySeconds: 30
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: PORT
+        value: '8080'
+      - key: DB_HOST
+        fromDatabase: {name: staffdesk-db, property: host}
+      - key: DB_PORT
+        fromDatabase: {name: staffdesk-db, property: port}
+      - key: DB_NAME
+        fromDatabase: {name: staffdesk-db, property: database}
+      - key: DB_USER
+        fromDatabase: {name: staffdesk-db, property: user}
+      - key: DB_PASSWORD
+        fromDatabase: {name: staffdesk-db, property: password}
+      - key: DB_SSLMODE
+        value: require
+      - key: JWT_SECRET
+        generateValue: true
+      - key: BOOTSTRAP_ADMIN_EMAIL
+        sync: false
+      - key: BOOTSTRAP_ADMIN_PASSWORD
+        sync: false
+      - key: DB_POOL_SIZE
+        value: '5'
+      - key: API_DOCS_ENABLED
+        value: 'false'
+databases:
+  - name: staffdesk-db
+    databaseName: staffdesk
+    user: staffdesk
+    region: singapore
+    postgresMajorVersion: '17'
+    plan: 0.5c-1g
+    diskSizeGB: 10
+    ipAllowList: []

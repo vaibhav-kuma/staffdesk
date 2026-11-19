@@ -1,0 +1,14 @@
+LOCAL DISPOSABLE DATABASE DRILL ONLY; not an off-site production backup.
+Encrypted backup created: <local-drill>/staffdesk-20261119T072942Z.dump.age
+staffdesk-20261119T072942Z.dump.age: OK
+ version | success 
+---------+---------
+ 1       | t
+(1 row)
+
+ employee_count 
+----------------
+              1
+(1 row)
+
+Restore completed. Start an isolated backend against this DB and run the authenticated smoke test before accepting recovery.

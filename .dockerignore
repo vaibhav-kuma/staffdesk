@@ -1,0 +1,9 @@
+**/target
+.git
+.github
+.env*
+**/*.log
+backups
+artifacts
+**/*.age
+**/*.dump

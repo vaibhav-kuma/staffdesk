@@ -1,0 +1,4 @@
+PASS: readiness and anonymous access rejection; transport=HTTP
+PASS: authenticated create/read/update/search
+PASS: deletion cleanup
+Verified API origin: http://127.0.0.1:8080

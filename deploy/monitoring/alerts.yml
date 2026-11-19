@@ -1,0 +1,13 @@
+groups:
+  - name: staffdesk
+    rules:
+      - alert: StaffdeskDown
+        expr: up{job="staffdesk"} == 0
+        for: 2m
+        labels: {severity: critical}
+        annotations: {summary: 'Staffdesk metrics endpoint unavailable'}
+      - alert: StaffdeskHighErrorRate
+        expr: sum(rate(http_server_requests_seconds_count{application="staffdesk",status=~"5.."}[5m])) / clamp_min(sum(rate(http_server_requests_seconds_count{application="staffdesk"}[5m])), 0.01) > 0.05
+        for: 5m
+        labels: {severity: warning}
+        annotations: {summary: 'Staffdesk 5xx rate above 5 percent'}

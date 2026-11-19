@@ -1,0 +1,12 @@
+**/target/
+**/.idea/
+*.iml
+.env
+.env.*
+!.env.example
+*.log
+*.age
+*.dump
+backups/
+artifacts/
+.DS_Store

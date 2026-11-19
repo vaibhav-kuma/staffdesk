@@ -1,0 +1,16 @@
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.227 s -- in com.staffdesk.EmployeeServiceTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in com.staffdesk.config.SecurityConfigTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.40 s -- in com.staffdesk.ApplicationIT
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.681 s -- in com.staffdesk.desktop.ApiClientTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.183 s -- in com.staffdesk.desktop.FxSmokeTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Reactor Summary for staffdesk 1.0.0:
+[INFO] staffdesk .......................................... SUCCESS [  0.801 s]
+[INFO] contracts .......................................... SUCCESS [  1.070 s]
+[INFO] backend ............................................ SUCCESS [ 30.398 s]
+[INFO] desktop ............................................ SUCCESS [  2.911 s]
+[INFO] BUILD SUCCESS
+[INFO] Total time:  35.599 s
+[INFO] Finished at: 2026-11-19T07:30:45Z
