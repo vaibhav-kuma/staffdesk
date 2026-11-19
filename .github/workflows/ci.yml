@@ -50,7 +50,7 @@ jobs:
           DB_PASSWORD: validation-only
           JWT_SECRET: validation-only
         run: docker compose config --quiet
-      - uses: docker/build-push-action@v6
+      - uses: docker/build-push-action@v7
         with:
           context: .
           file: deploy/Dockerfile
