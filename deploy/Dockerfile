@@ -10,7 +10,7 @@ COPY contracts/src contracts/src
 COPY backend/src backend/src
 RUN --mount=type=cache,target=/root/.m2 mvn -B -pl backend -am package -DskipTests
 
-FROM eclipse-temurin:21-jre-jammy
+FROM eclipse-temurin:25-jre-jammy
 RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certificates  && rm -rf /var/lib/apt/lists/* && groupadd --gid 10001 staffdesk  && useradd --uid 10001 --gid 10001 --no-create-home staffdesk
 WORKDIR /app
 COPY --from=build --chown=10001:10001 /src/backend/target/backend-1.0.0.jar /app/app.jar
